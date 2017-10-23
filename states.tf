@@ -25,7 +25,7 @@ provider "aws" {
 data "terraform_remote_state" "infrastructure_state" {
   backend = "s3"
   config {
-    bucket = "terraform-states-${var.region}"
+    bucket = "zendcon-alain-etouches-terraform-states-${var.region}"
     key = "${var.env_name}/infrastructure.tfstate"
     region = "${var.region}"
   }

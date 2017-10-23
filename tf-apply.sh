@@ -18,7 +18,7 @@ fi
 env_name=$(sed -n 's/^env_name = "\(.*\)"$/\1/p' $variablesFile)
 target_aws_region=$(sed -n 's/^region = "\(.*\)"$/\1/p' $variablesFile)
 
-terraform_remote_states_bucket=terraform-states-${target_aws_region}
+terraform_remote_states_bucket=zendcon-alain-etouches-terraform-states-${target_aws_region}
 
 export AWS_DEFAULT_REGION=${target_aws_region}
 
